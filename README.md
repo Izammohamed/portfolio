@@ -1,1 +1,217 @@
-# portfolio
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Izam Mohamed — Portfolio</title>
+  <meta name="description" content="Portfolio of Izam Mohamed — multimedia & web technology student. Projects, CV, contact." />
+  <style>
+    :root{
+      --bg-1: #fff5f7;
+      --bg-2: #fff9f0;
+      --accent-1: #ff6b6b;
+      --accent-2: #feca57;
+      --muted: #555555;
+      --card: #ffffff;
+      --glass: rgba(255,255,255,0.8);
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.06);
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+      color:#0f172a;
+      line-height:1.6;
+      padding:32px 20px;
+    }
+    a{color:inherit;text-decoration:none}
+    img, video{max-width:100%; display:block; border-radius:12px;}
+
+    .container{max-width:var(--maxw);margin:0 auto}
+
+    header{
+      position:sticky;top:16px;z-index:1000;
+      background:var(--glass);
+      border:1px solid rgba(255,107,107,0.08);
+      backdrop-filter: blur(8px);
+      border-radius:20px;
+      padding:14px 18px;box-shadow:var(--shadow);
+      display:flex;align-items:center;gap:18px;justify-content:space-between
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{font-size:18px;color:var(--accent-1)}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+    nav a:hover{background:linear-gradient(90deg,rgba(255,107,107,0.08),rgba(254,202,87,0.06));color:var(--accent-1)}
+
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;margin:36px 0;align-items:center}
+    .card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .intro h2{font-size:28px;color:var(--accent-1);margin-bottom:8px}
+    .intro p{color:var(--muted);margin-bottom:14px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:white}
+    .btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.08);color:var(--accent-1)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{padding:8px 10px;border-radius:999px;background:linear-gradient(180deg,rgba(254,202,87,0.12),rgba(255,107,107,0.06));font-weight:600;color:var(--accent-1)}
+
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:140px;height:140px;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(255,107,107,0.08)}
+    .profile h3{margin-top:6px}
+    .meta{color:var(--muted);font-size:14px}
+
+    section{margin:20px 0}
+    section > .card{padding:26px}
+    section h3{color:var(--accent-1);font-size:20px;margin-bottom:12px}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff,#fff5f7);border:1px solid rgba(255,107,107,0.05);cursor:pointer;transition:transform .25s,box-shadow .25s}
+    .project:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,24,40,0.06)}
+    .project .meta{padding:12px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    form{display:grid;gap:12px}
+    input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);font-size:15px}
+    textarea{min-height:120px;resize:vertical}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.projects-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}.menu-toggle{display:inline-flex}}
+    @media (max-width:640px){.projects-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}header{padding:12px}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="brand">
+      <div class="logo">IM</div>
+      <div>
+        <h1>Izam Mohamed</h1>
+        <div style="font-size:13px;color:#555">Multimedia & Web Technology — Student</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#cv">CV</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="intro card">
+      <h2>Hello! I'm Izam — creating beautiful interfaces.</h2>
+      <p>Student of Multimedia & Web Technology. Experienced in UI/UX, animations, web and Flutter apps.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Contact me</a>
+        <a class="btn btn-outline" href="CV.pdf" download>Download CV</a>
+      </div>
+      <div class="skills">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JS</span>
+        <span class="chip">Figma</span>
+        <span class="chip">Flutter</span>
+      </div>
+    </div>
+
+    <aside class="profile card">
+      <div class="avatar"><img src="IMG_2941.jpeg" alt="Profile photo"></div>
+      <h3>Izam Mohamed</h3>
+      <div style="color:#555;font-size:14px">Multimedia & Web Tech — University of Vocational Technology</div>
+    </aside>
+  </main>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="card">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <!-- Example Project with Screenshot -->
+        <div class="project">
+          <img src="projects/portfolio_screenshot.png" alt="Portfolio Screenshot">
+          <div class="meta">
+            <strong>Portfolio Website</strong>
+            <div class="muted">HTML • CSS • JS</div>
+          </div>
+        </div>
+        <!-- Example Project with Video -->
+        <div class="project">
+          <video controls>
+            <source src="projects/flutter_demo.mp4" type="video/mp4">
+          </video>
+          <div class="meta">
+            <strong>Flutter CV App</strong>
+            <div class="muted">Flutter • Dart</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Projects Section -->
+  <section id="projects">
+    <div class="card">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <!-- Example Project with Screenshot -->
+        <div class="project">
+          <img src="projects/portfolio_screenshot.png" alt="Portfolio Screenshot">
+          <div class="meta">
+            <strong>Portfolio Website</strong>
+            <div class="muted">HTML • CSS • JS</div>
+          </div>
+        </div>
+        <!-- Example Project with Video -->
+        <div class="project">
+          <video controls>
+            <source src="projects/flutter_demo.mp4" type="video/mp4">
+          </video>
+          <div class="meta">
+            <strong>Flutter CV App</strong>
+            <div class="muted">Flutter • Dart</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="card">
+      <h3>About Me</h3>
+      <div class="about-grid">
+        <div>
+          <p>I am a multimedia & web technology student passionate about UI/UX, web and mobile apps. I create clean, responsive, and interactive projects.</p>
+          <ul>
+            <li>UI Design & Prototyping</li>
+            <li>Interactive Web Interfaces</li>
+            <li>Animation & Motion Graphics</li>
+            <li>Flutter App Development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="card">
+      <h3>Contact Me</h3>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Izam Mohamed. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>
